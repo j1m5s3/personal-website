@@ -24,10 +24,10 @@ export default function Home() {
         <title>LOOK AT ME</title>
         <meta name="description" content="I made this site so you'll hire me" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon_personal_logo.ico" />
       </Head>
       <div className="home-container container-fluid m-auto">
-        
+
         <div className="row navbar navigation-bar m-auto mt-3 justify-content-center align-items-center">
           <div className="col-sm-1 d-flex justify-content-center align-items-center">
             <button onClick={() => handleNavClick(0)} title="Home" variant="primary" className="navigation-bar-button">
