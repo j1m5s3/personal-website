@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.home-container {
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #5e5b51ec, #222322);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-bar {
+  width: 50%;
+}
+
+.navigation-bar-button {
+  border-radius: 50%;
+}
+
+.social-navbar {
+  width: 50%;
+}
+
+.social-navbar-button {
+  border-radius: 50%;
+}
+
+h3 {
+  font-weight: bolder;
+}
+
+p {
+  color: aliceblue;
+  font-size: small;
+}
+
+ul {
+  color: aqua;
+  font-size: smaller;
+}
+
+.site-text p, .site-text ul {
+  opacity: 0;
+  transform: translateY(50%);
+  animation: fade-up 1s ease-in-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.about-me p:nth-of-type(odd), .about-me ul:nth-of-type(odd) {
+  animation-delay: 0.2s;
+}
+
+.about-me p:nth-of-type(even), .about-me ul:nth-of-type(even) {
+  animation-delay: 0.4s;
+}
