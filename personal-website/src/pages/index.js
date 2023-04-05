@@ -6,12 +6,14 @@ import { useState, useEffect } from 'react';
 
 import HomeComponent from '@/componenets/HomeComponent';
 import PersonalProjects from '@/componenets/PersonalProjects';
-import Resume from '@/componenets/Resume';
+import AboutMe from '@/componenets/AboutMe';
+import Email from '@/componenets/Email';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const component_selections = ['Home', 'Projects', 'Resume'];
+  const component_selections = ['Home', 'Projects', 'About', 'Email'];
   const [componentSelection, setComponentSelection] = useState(component_selections[0]);
 
   function handleNavClick(user_selection) {
@@ -21,12 +23,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>LOOK AT ME</title>
+        <title>James.Lynch@j1m5s3</title>
         <meta name="description" content="I made this site so you'll hire me" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon_personal_logo.ico" />
       </Head>
-      <div className="home-container container-fluid m-auto">
+      <div className="main-container container-fluid m-auto">
 
         <div className="row navbar navigation-bar m-auto mt-3 justify-content-center align-items-center">
           <div className="col-sm-1 d-flex justify-content-center align-items-center">
@@ -40,8 +42,13 @@ export default function Home() {
             </button>
           </div>
           <div className="col-sm-1 d-flex justify-content-center align-items-center">
-            <button onClick={() => handleNavClick(2)} title="Resume" variant="primary" className="navigation-bar-button">
+            <button onClick={() => handleNavClick(2)} title="About Me" variant="primary" className="navigation-bar-button">
               <i className="bi bi-file-earmark-person"></i>
+            </button>
+          </div>
+          <div className="col-sm-1 d-flex justify-content-center align-items-center">
+            <button onClick={() => handleNavClick(3)} title="Email Me" variant="primary" className="navigation-bar-button">
+              <i className="bi bi-envelope-at"></i>
             </button>
           </div>
         </div>
@@ -49,7 +56,8 @@ export default function Home() {
         <div className="container-fluid m-auto">
           {componentSelection == 'Home' && <HomeComponent />}
           {componentSelection == 'Projects' && <PersonalProjects />}
-          {componentSelection == 'Resume' && <Resume />}
+          {componentSelection == 'About' && <AboutMe />}
+          {componentSelection == 'Email' && <Email />}
         </div>
 
         <div className="row social-navbar m-auto mt-3 justify-content-center align-items-center">
